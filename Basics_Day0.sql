@@ -14,6 +14,9 @@ SELECT "title","author" FROM "BOOKLIST" where "year"!=2023;
 SELECT "title","author" FROM "BOOKLIST" where "year"<>2023;
 /*Recom : We can use "" for the SQL identifiers and '' for all the strings that are listed 
 We have = which is kind of self explainatory !=  not equal <> other than */
-
+SELECT "title","author" FROM "BOOKLIST" WHERE NOT "year"=2023;
 /* Merging condition */
-SELECT "title","format" FROM "BOOKLIST" where "format" <> 'hardcover' and "year" <> 2023
+SELECT "title","format" FROM "BOOKLIST" where "format" <> 'hardcover' and "year" <> 2023;
+/*AND OR helps to make more complex conditions , we will also understand () use of brackets*/
+SELECT "title","format" FROM "BOOKLIST" where "format" <> 'hardcover' and "year" <> 2023;
+SELECT "title","format" FROM "BOOKLIST" where ("year" = 2023 and "year" = 2022) and "format" <> 'hardcover';
