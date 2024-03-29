@@ -29,3 +29,13 @@ SELECT "title" FROM "BOOKLIST" where "title" LIKE 'love%' ; /*will give the resu
 SELECT "title" FROM "BOOKLIST" where "title" LIKE 'love %' ;
 SELECT "title" FROM "BOOKLIST" where "title" LIKE 'The%love%' ; /* Any book will have The and then love in title , THE LOVE LIFE*/
 SELECT "title" FROM "BOOKLIST" where "title" LIKE 'P_RE'; /* When you dont know if it is Pyre or pire , multiple _ are allowed too*/
+SELECT "title" FROM "BOOKLIST" where "title" LIKE 'T____' ; /* will on return T and then the _ which will have exact same number of chars as we have mentioned in query*/
+/* Working with ranges 
+<
+>
+<=
+>=
+*/
+SELECT "title","author","year" FROM "BOOKLIST" where "year"=2023 or "year"=2022 or "year"=2021;
+/* SO the better way */
+SELECT "title","author","year" FROM "BOOKLIST" where "year">=2019 AND "year"<=2022;
