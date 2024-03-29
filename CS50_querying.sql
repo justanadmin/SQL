@@ -41,3 +41,10 @@ SELECT "title","author","year" FROM "BOOKLIST" where "year"=2023 or "year"=2022 
 SELECT "title","author","year" FROM "BOOKLIST" where "year">=2019 AND "year"<=2022;
 /*Between .. and ...*/
 SELECT "title","author","year" FROM "BOOKLIST" where "year" between 2019 AND 2022;
+/*string search is not case sensitive in case of LIKE but in case of = it is case sensitive */
+/* ORDER BY Default order is AESC */
+SELECT "title","author","year","rating","votes" FROM "BOOKLIST" ORDER BY "rating" DESC, "votes" DESC  LIMIT 10;
+/*Order by rating first and then by votes* in case of string order is alphabetical*/
+/*AGGREGATE COUNT AVG MIN MAX SUM */
+SELECT AVG("rating") FROM "BOOKLIST";
+SELECT ROUND(AVG("rating")) FROM "BOOKLIST";
