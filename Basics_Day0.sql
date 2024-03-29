@@ -15,3 +15,5 @@ SELECT "title","author" FROM "BOOKLIST" where "year"<>2023;
 /*Recom : We can use "" for the SQL identifiers and '' for all the strings that are listed 
 We have = which is kind of self explainatory !=  not equal <> other than */
 
+/* Merging condition */
+SELECT "title","format" FROM "BOOKLIST" where "format" <> 'hardcover' and "year" <> 2023
