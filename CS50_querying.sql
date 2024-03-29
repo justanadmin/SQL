@@ -39,3 +39,5 @@ SELECT "title" FROM "BOOKLIST" where "title" LIKE 'T____' ; /* will on return T 
 SELECT "title","author","year" FROM "BOOKLIST" where "year"=2023 or "year"=2022 or "year"=2021;
 /* SO the better way */
 SELECT "title","author","year" FROM "BOOKLIST" where "year">=2019 AND "year"<=2022;
+/*Between .. and ...*/
+SELECT "title","author","year" FROM "BOOKLIST" where "year" between 2019 AND 2022;
