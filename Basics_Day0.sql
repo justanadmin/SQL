@@ -23,3 +23,9 @@ SELECT "title","format" FROM "BOOKLIST" where ("year" = 2023 and "year" = 2022) 
 /*IS NULL and IS NOT NULL */
 SELECT "title","translator" FROM "BOOKLIST" where "translator" IS NULL;
 SELECT "title","translator" FROM "BOOKLIST" where "translator" IS NOT NULL;
+/* matching patters in SQL LIKE % : any character around _ :any number of character that we need to check */
+SELECT "title" FROM "BOOKLIST" where "title" LIKE '%love%'; /*love somewhere in the title : Love in the Big City , Lace Love Lace , Do you love */
+SELECT "title" FROM "BOOKLIST" where "title" LIKE 'love%' ; /*will give the result of books that has only love in start e.g. Love Lace , love me like you do , Loved , Love Life*/
+SELECT "title" FROM "BOOKLIST" where "title" LIKE 'love %' ;
+SELECT "title" FROM "BOOKLIST" where "title" LIKE 'The%love%' ; /* Any book will have The and then love in title , THE LOVE LIFE*/
+SELECT "title" FROM "BOOKLIST" where "title" LIKE 'P_RE'; /* When you dont know if it is Pyre or pire */
