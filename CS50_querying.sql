@@ -49,3 +49,6 @@ SELECT "title","author","year","rating","votes" FROM "BOOKLIST" ORDER BY "rating
 SELECT AVG("rating") FROM "BOOKLIST";
 SELECT ROUND(AVG("rating"),2) AS "Average Rating" FROM "BOOKLIST";
 /*ROUND(AVG("rating"),2) will round at 2 decial points AS will add the name of column*/
+SELECT SUM("votes") from "Longlist";
+/* Max or Min in string will give maximum W charachter wise */
+SELECT COUNT(DISTINCT "publisher") AS 'Total Publisher' FROM "booklist";
