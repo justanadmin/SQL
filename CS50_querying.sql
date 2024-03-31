@@ -52,3 +52,26 @@ SELECT ROUND(AVG("rating"),2) AS "Average Rating" FROM "BOOKLIST";
 SELECT SUM("votes") from "Longlist";
 /* Max or Min in string will give maximum W charachter wise */
 SELECT COUNT(DISTINCT "publisher") AS 'Total Publisher' FROM "booklist";
+/*RLIKE Fucntion in SQL */
+/*
+*	Zero or more instances of string preceding it
++	One or more instances of strings preceding it
+.	Any single character
+?	Match zero or one instances of the strings preceding it.
+^	caret(^) matches Beginning of string
+$	End of string
+[abc]	Any character listed between the square brackets
+[^abc]	Any character not listed between the square brackets
+[A-Z]	match any upper case letter.
+[a-z]	match any lower case letter
+[0-9]	match any digit from 0 through to 9.
+*/
+SELECT DISTINCT(CITY) FROM STATION WHERE CITY RLIKE '^[aeiou].*[aeiou]$'
+SELECT DISTINCT(CITY) FROM STATION WHERE CITY NOT RLIKE '^[aeiou].*$' /*Start*/
+SELECT DISTINCT(CITY) FROM STATION WHERE CITY NOT RLIKE '^.*[aeiou]$' ; /*End*/
+/*
+^ Matches begining of String 
+. Any single character
+* Zero or more instance preceding it 
+$ End of String 
+*/
